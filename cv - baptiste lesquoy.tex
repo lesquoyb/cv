@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{baptiste2.jpg} % Profile picture
+
+\cvname{Baptiste Lesquoy} % Your name
+\cvjobtitle{Ingénieur informatique} % Job title/career
+
+\cvdate{15 Février 1993} % Date of birth
+\cvaddress{14 rue Paul Lancrenon\newline Audun-le-tiche, France} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+33 6 50 21 00 04} % Phone number
+\cvsite{https://github.com/lesquoyb} % Personal website
+\cvmail{baptistelesquoy@protonmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{Je programme depuis plus de 10 ans, dont plus de 4 en entreprise. J'aime travailler sur des projets qui me stimulent par un défi technique ou théorique. J'apprécie aussi beaucoup partager mes connaissances issus de ma formation universitaire (notamment en intelligence artificielle), et de plus en plus faire de la gestion de projet.}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{SQL/4},{Python/4.5},{{C/C++}/4.5},{Java/5},{C\#/5}}
+
+%------------------------------------------------
+
+
+%\languages{{Anglais/{A1/A2}},{Italien/{B1}},{Allemand/{A1}}}
+
+\languages{\textbf{Français}  &langue maternelle\\\textbf{Anglais} & C1/C2 (TOEIC 905)\\\textbf{Italien} & A2\\\textbf{Allemand} & A1\\}
+
+
+\makeprofile % Print the sidebar
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Formation}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2015-2017}{Master de recherche Informatique}{Université de Lorraine - Nancy}{\emph{Spécialité Interaction-Perception-Apprentissage-Connaissance}}
+	\twentyitem{2014-2015}{Licence Informatique}{Université de Lorraine - Metz}{}
+	\twentyitem{2012-2014}{DUT Informatique}{IUT de Metz}{}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+	
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Expérience}
+
+\begin{twenty}
+	
+	% QUADRAM
+	\twentyitem{\small depuis 2018}{Ingénieur informatique}{Quadram - Luxembourg}
+	{ 
+		Conception et réalisation d’applications mobiles cross-plateforme en C\# via Xamarin, ainsi que d'outils à usage interne, maintenance des anciennes applications (bureau et mobile).\\
+		Conception de prototypes/projets tests pour les futurs angles de développement de l'entreprise.\\
+		Formation en interne des collaborateurs à la programmation (SQL et C\#) et aux algorithmes de bases de l'intelligence artificielle. \\
+		Encadrement des développeurs juniors.}
+	 
+	% LORIA
+	\twentyitem{\small Mars–Sep. 2017}{Stage de master}{Laboratoire Loria - Nancy}{Sous la direction de Alexis Scheuer. Travail de recherche sur l’élaboration d’un algorithme générique de suivi de véhicule dans le cadre d’un convoi de robots. Reprise de travaux de thèse effectués précédemment, amélioration/correction des algorithmes proposés et implémentation dans ROS en C++.}
+	
+	% Quadram
+	\twentyitem{\small Avril–Juin 2015}{Stage Analyste-programmeur}{Quadram Luxembourg}{Conception et réalisation d'une application mobile cross-plateforme utilisant la technologie Xamarin pour gérer des projets du logiciel ErgoOffice via un webservice SOAP.}
+	
+	%Abvent
+	\twentyitem{\small Juin-Sep. 2014}{Analyste-programmeur}{Abvent - Luxembourg}{Conception et réalisation d’un plug-in en HTML/Javascript pour le logiciel Excel permettant de créer des patrons de documents utilisable dans le logiciel BIMOffice.}
+
+	
+	%Abvent
+	\twentyitem{\small Avril-Juin 2014}{Stage programmeur}{Abvent - Luxembourg}{Conception et réalisation d'un outil d'export en format Excel pour le logiciel BIMOffice dans le langage 4D.}
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Évènements/compétitions}
+
+\begin{twenty}
+	
+	\twentyitem{2016}{Prix de l'innovation}{Robafis - Toulouse}{Avec l'équipe master ISC/Informatique de l'université de Lorraine. Conception d'un robot et de }
+	
+	\twentyitem{2015}{Deuxième place}{Robafis - Bayonne}{Avec l'équipe master ISC/Informatique de l'université de Lorraine. Conception d'un robot et de }
+	
+	
+	\twentyitem{2015}{Premier prix}{Hackathon bibliothèque de Nancy}{Création d'un jeu vidéo de plateforme mettant en valeur les ressources numérisées de la bibliothèque. Réalisé en python avec pygame.}
+	
+	\twentyitem{2014}{Prix coup de cœur du jury}{Hackathon GEN Lorraine}{Avec l'équipe \textit{nice penguins}. Élaboration d'une application mobile permettant de "composer" une musique en se déplaçant dans la ville de Metz grâce à la localisation GPS et les données publiques des lieux d'intérêt.}
+	
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Intérêts}
+Très curieux de manière générale, je travaille souvent sur des petits projets de programmation ou de robotique pendant mon temps libre, que ce soit afin de m’aider au quotidien ou simplement m’amuser ou mieux appréhender certains concepts. J’ai aussi depuis toujours un grand intérêt pour la musique, l’histoire et les voyages. Je pratique la musculation depuis 3 ans et aimerai commencer un sport de combat en club à la prochaine rentrée.
+
+
+
+\end{document} 
