@@ -19,6 +19,7 @@
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
 \RequirePackage{intcalc}
+\RequirePackage{fontawesome5}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -30,7 +31,8 @@
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{sidecolor}{HTML}{E7E7E7}
-\definecolor{mainblue}{HTML}{0E5484}
+\definecolor{mainblue}{HTML}{08C5D1}
+\definecolor{secondblue}{HTML}{0E5484}
 \definecolor{maingray}{HTML}{B9B9B9}
 
 %----------------------------------------------------------------------------------------
@@ -196,12 +198,12 @@
 \newcommand{\makeprofile}{
 	
 	\begin{tikzpicture}[remember picture,overlay]
-   		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+   		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9.5cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
 	\end{tikzpicture}
 
 	%------------------------------------------------
 
-	\begin{textblock}{6}(0.5, 0.2)
+	\begin{textblock}{6.5}(0.5, 0.2)
 			
 		
 		% Print Title if not empty	
@@ -237,11 +239,11 @@
 
 		\renewcommand{\arraystretch}{1.6}
 		\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\cvsite}{\cvsite}\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}}
+			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\faBirthdayCake} & \cvdate\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\faEnvelope[regular]} & \cvaddress\\}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\faPhone*} & \cvnumberphone\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\faGlobeAsia} & \href{\cvsite}{\cvsite}\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\faAt} & \href{mailto:\cvmail}{\cvmail}}
 		\end{tabular}
 
 		%------------------------------------------------
@@ -282,9 +284,10 @@
 \newcommand{\sectioncolor}[1]{%
 	{%
 		\round{#1}{
-			\ifcase\intcalcMod{\value{colorCounter}}{2}%
-			mainblue\or%
-			maingray\fi%
+			secondblue
+%			\ifcase\intcalcMod{\value{colorCounter}}{2}%
+%			secondblue\or%
+%			mainblue\fi%
 		}%
 	}%
 	\stepcounter{colorCounter}%
