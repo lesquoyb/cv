@@ -18,6 +18,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{intcalc}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -112,6 +113,8 @@
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
+\newcommand{\cvtitle}[1]{\renewcommand{\cvtitle}{#1}}
+\newcommand{\cvprofiletitle}[1]{\renewcommand{\cvprofiletitle}{#1}}
 
 % Command for printing the contact information icons
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
@@ -149,8 +152,8 @@
 		%\ifthenelse{\equal{#1}{}}{}{
 			%\begin{flushleft}
 
-			\profilesubsection{Langues}
-			\begin{tabular}{lc}
+			\profilesection{Langues}
+			\begin{tabular}{lp{1.5cm}c}
 #1
 %				\foreach \x/\y in {#1}{
 %					\x & \y \\
@@ -191,6 +194,7 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\makeprofile}{
+	
 	\begin{tikzpicture}[remember picture,overlay]
    		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
 	\end{tikzpicture}
@@ -199,6 +203,17 @@
 
 	\begin{textblock}{6}(0.5, 0.2)
 			
+		
+		% Print Title if not empty	
+		\ifthenelse{\equal{\cvprofiletitle}{}}{}{
+			\begin{center}
+				\Huge{\cvprofiletitle}
+			\end{center}
+				
+		}
+		
+		
+		
 		%------------------------------------------------
 		
 		\ifthenelse{\equal{\profilepic}{}}{}{
@@ -232,10 +247,10 @@
 		%------------------------------------------------
 		
 		\ifthenelse{\equal{\aboutme}{}}{}{
-			\profilesection{À propos}
-			\begin{flushleft}
+			\profilesection{À propos de moi}
+			\begin{justify}
 				\aboutme
-			\end{flushleft}
+			\end{justify}
 		}
 
 		%------------------------------------------------
@@ -253,30 +268,22 @@
 	\end{textblock}
 }
 
+% TITLE
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
 %----------------------------------------------------------------------------------------
 
 % Command to create the rounded boxes around the first three letters of section titles
 \newcommand*\round[2]{%
-	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
+	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=4mm, fill=#2,#2,text=white](char){#1};%
 }
 
 \newcounter{colorCounter}
 \newcommand{\sectioncolor}[1]{%
 	{%
 		\round{#1}{
-			\ifcase\value{colorCounter}%
-			maingray\or%
+			\ifcase\intcalcMod{\value{colorCounter}}{2}%
 			mainblue\or%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
- 			maingray\or%
-			mainblue\else%
 			maingray\fi%
 		}%
 	}%
@@ -295,6 +302,12 @@
 		\large\color{gray} #1%
 	}
 	\par\vspace{.25\parskip}%
+}
+
+\renewcommand{\cvtitle}[1]{
+	\begin{center}
+		\Huge{#1}
+	\end{center}
 }
 
 %----------------------------------------------------------------------------------------
@@ -346,6 +359,6 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
+\RequirePackage[left=7.6cm,top=-0.3cm,right=1cm,bottom=0cm,nohead,nofoot]{geometry}
 
 \RequirePackage{hyperref}
