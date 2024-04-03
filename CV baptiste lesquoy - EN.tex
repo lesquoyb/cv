@@ -20,6 +20,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[letterpaper]{twentysecondcv - EN} % a4paper for A4
+\usepackage{hyperref}
 
 
 %----------------------------------------------------------------------------------------
@@ -39,6 +40,7 @@
 \cvsite{https://github.com/lesquoyb} % Personal website
 \cvmail{baptistelesquoy@protonmail.com} % Email address
 
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -47,7 +49,7 @@
 %	 ABOUT ME
 %----------------------------------------------------------------------------------------
 
-\aboutme{I have been programming for more than 10 years, with more than 4 in the industry. I like to work on projects that are technical challenges or that tickle my intellect.\\ I also really enjoy sharing my knowledge and find myself appreciating project management more and more.}
+\aboutme{I have been programming for more than 10 years. I like to work on projects that are technical challenges or that tickle my intellect.\\ I also really enjoy sharing my knowledge and find myself appreciating project management more and more.}
 
 %----------------------------------------------------------------------------------------
 %	 SKILLS
@@ -61,7 +63,12 @@
 
 %\languages{{Anglais/{A1/A2}},{Italien/{B1}},{Allemand/{A1}}}
 
-\languages{\textbf{\color{black}French}  & &mother tongue\\\textbf{\color{black}English} & & C1/C2 (TOEIC 905)\\\textbf{\color{black}Italian} & &A2\\\textbf{\color{black}German} & &A1\\}
+\languages{
+	\textbf{\color{black}French}  & &mother tongue\\
+	\textbf{\color{black}English} & & C1/C2 (TOEIC 905)\\
+%	\textbf{\color{black}Italian} & &A2\\
+%	\textbf{\color{black}German} & &A1\\
+	}
 
 
 \makeprofile % Print the sidebar
@@ -69,37 +76,29 @@
 
 
 
-%----------------------------------------------------------------------------------------
-%	 EDUCATION
-%----------------------------------------------------------------------------------------
-
 \cvtitle{Curriculum Vitæ}
 
-
-\section{Education}
-
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem{2015-2017}{Master's degree in computer science}{Université de Lorraine - Nancy, France}{\emph{Track Interaction-Perception-Learning-Knowledge}}
-	\twentyitem{2014-2015}{Licence Informatique}{Université de Lorraine - Metz, France}{}
-	\twentyitem{2012-2014}{DUT Informatique}{IUT de Metz, France}{}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-	
-\end{twenty}
 
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
 %----------------------------------------------------------------------------------------
 
 \section{Experience}
-
+\\
 \begin{twenty}
-
-	% IRD
-	\twentyitem{\small 2021 - now}{International Volunteer}{ACROSS Laboratory - Hanoi, Vietnam}
+\\
+	% SLAM-B
+	\twentyitem{\small 2023 - now}{Software engineer}{ACROSS Laboratory - Hanoi, Vietnam}
 	{
-		Project management: In charge of the release of GAMA 1.9.0\\
-		Mentoring: In charge of interns working on multiple projects around the GAMA platform.\\
-		 Development: Development of new features in the modeling platform GAMA to prepare for the next major release.
+		In charge of the developement and improvement of the GAMA platform in the context of the \href{https://www.slamb.fr/}{SLAM-B} project.\\
+		I'm working on improving performances of the platform for big models as well as creating easy ways to integrate external models into a GAMA simulation.
+	}
+	% VIA
+	\twentyitem{\small 2021 - 2023}{International Volunteer}{ACROSS Laboratory - Hanoi, Vietnam}
+	{
+		\textbf{Project management:} In charge of the release of GAMA 1.9\\
+		\textbf{Mentoring:} In charge of interns working on multiple projects around the GAMA platform.\\
+		 \textbf{Development:} Development of new features in the modeling platform GAMA to prepare for the next major release.
 	}
 	
 	% QUADRAM
@@ -137,38 +136,56 @@
 	}
 
 \end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\\
+\begin{twenty} % Environment for a list with descriptions
+	
+	\\
+	\twentyitem{2015-2017}{Master's degree in computer science}{Université de Lorraine - Nancy, France}{\emph{Track Interaction-Perception-Learning-Knowledge}}
+	\twentyitem{2014-2015}{Licence Informatique}{Université de Lorraine - Metz, France}{}
+	\twentyitem{2012-2014}{DUT Informatique}{IUT de Metz, France}{}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+	
+\end{twenty}
+
 %\\
 
 %----------------------------------------------------------------------------------------
 %	 AWARDS
 %----------------------------------------------------------------------------------------
-
-\section{Events/Competitions}
-
-\begin{twenty}
-	
-	\twentyitem{2016}{Innovation prize}{Robafis - Toulouse}
-	{
-		With the team of the Université de Lorraine. Creation of a robot reproducing a beacon deposit in an inaccessible area scenario.
-	}
-	
-	\twentyitem{2015}{2\textsuperscript{nd} prize}{Robafis - Bayonne}
-	{
-		With the team of the University of Lorraine. Creation of a robot reproducing a lunar intervention scenario.
-	}
-	
-	
-	\twentyitem{2015}{1\textsuperscript{st} prize}{Hackathon of Nancy's city library}
-	{
-		Creation of a platform video game highlighting the library's digitized resources. Made in python with pygame.
-	}
-	
-	\twentyitem{2014}{Jury's Favourite Award}{Hackathon GEN Lorraine}
-	{
-		With the team \textit{nice penguins}. Development of a mobile application allowing to compose a music by moving around in the city of Metz thanks to the GPS localization and the public data of the places of interest. Realized in C\# with Unity.
-	}
-	
-\end{twenty}
+%
+%\section{Events/Competitions}
+%
+%\begin{twenty}
+%	
+%	\twentyitem{2016}{Innovation prize}{Robafis - Toulouse}
+%	{
+%		With the team of the Université de Lorraine. Creation of a robot reproducing a beacon deposit in an inaccessible area scenario.
+%	}
+%	
+%	\twentyitem{2015}{2\textsuperscript{nd} prize}{Robafis - Bayonne}
+%	{
+%		With the team of the University of Lorraine. Creation of a robot reproducing a lunar intervention scenario.
+%	}
+%	
+%	
+%	\twentyitem{2015}{1\textsuperscript{st} prize}{Hackathon of Nancy's city library}
+%	{
+%		Creation of a platform video game highlighting the library's digitized resources. Made in python with pygame.
+%	}
+%	
+%	\twentyitem{2014}{Jury's Favourite Award}{Hackathon GEN Lorraine}
+%	{
+%		With the team \textit{nice penguins}. Development of a mobile application allowing to compose a music by moving around in the city of Metz thanks to the GPS localization and the public data of the places of interest. Realized in C\# with Unity.
+%	}
+%	
+%\end{twenty}
 
 
 %----------------------------------------------------------------------------------------
@@ -176,7 +193,8 @@
 %----------------------------------------------------------------------------------------
 
 \section{Interests}
-Very curious by nature, I often work in my free time on small programming or robotics projects to entertain myself or develop my knowledge. I also always had a great interest in music, history and travel. I have been practicing sports for the past few years and I'm always curious to try new ones.
+
+Very curious by nature, I often work in my free time on small programming or robotics projects to entertain myself or develop my knowledge. I also always had a great interest in music, history and travel. I have been practicing sports for the past few years and I'm always curious to try new ones, I recently started training jiu jitsu and would like to improve in that discipline.
 
 
 
